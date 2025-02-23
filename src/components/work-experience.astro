@@ -1,5 +1,68 @@
 ---
+type WorkExperience = {
+  title: string;
+  company: string;
+  duration: string;
+  location: string;
+  responsibilities: string[];
+};
 
+const workExperiences: WorkExperience[] = [
+  {
+    title: "Fullstack Developer Intern",
+    company: "Elevaty",
+    duration: "Jan 2023 - Present",
+    location: "Remote",
+    responsibilities: [
+      "Contributed to the maintenance and development of new features for a customer card management system using React and Node.js.",
+      "Currently building workflow configuration software from scratch using PostgreSQL, Spring Boot, React, and AWS cloud tools, such as SQS.",
+      "Provided support to the Customer Success team.",
+      "Promoted the adoption of a testing culture within the company.",
+    ],
+  },
+  {
+    title: "Technical Administrative Assistant",
+    company: "Constanta Industrial Ltda.",
+    duration: "Sep 2022 - Dec 2023",
+    location: "Jarinu, SP",
+    responsibilities: [
+      "Developed graphical interfaces using Python, integrated with REST APIs for data analysis and reporting.",
+      "Automated tasks with Python, including email automation, integration with Office 365 (Excel, Word), and web automations with Selenium.",
+      "Performed data analysis with Pandas, Numpy, and Plotly.",
+      "Managed ETL processes using MySQL and PostgreSQL databases.",
+      "Built real-time dashboards to monitor 260,000 IoT devices, improving service quality by 40%.",
+      "Identified LoRa network gateway installation sites to enhance signal quality.",
+    ],
+  },
+];
 ---
 
-<section id="workflow-experience">My Work Experience</section>
+<section id="experience" class="py-20">
+  <div class="text-center">
+    <h2 class="text-4xl font-bold">My Work Experience</h2>
+    <p class="mt-4">
+      Here are some of my professional experiences and the projects I have
+      worked on.
+    </p>
+  </div>
+
+  <div class="mt-8">
+    {
+      workExperiences.map((experience) => (
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold">
+            {experience.title} - {experience.company}
+          </h3>
+          <p class="text-lg text-gray-600">
+            {experience.duration} | {experience.location}
+          </p>
+          <ul class="mt-4 list-disc pl-5">
+            {experience.responsibilities.map((responsibility) => (
+              <li>{responsibility}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

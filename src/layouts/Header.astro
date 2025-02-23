@@ -1,11 +1,33 @@
 ---
-
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 ---
 
-<header class="bg-gray-800 text-white p-4">
-  <nav class="flex justify-center space-x-8">
-    <a href="#about" class="hover:text-green-300">About</a>
-    <a href="#projects" class="hover:text-green-300">Projects</a>
-    <a href="#contact" class="hover:text-green-300">Contact</a>
-  </nav>
+<header class="text-center mb-12 mt-12">
+  <h1 class="text-4xl font-bold mb-4">Guilherme de M. C. Costa</h1>
+  <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+    <a href="mailto:echina725@gmail.com" class="flex items-center gap-1">
+      <Mail size={16} />
+      echina725@gmail.com
+    </a>
+    <a href="tel:+5511949940557" class="flex items-center gap-1">
+      <Phone size={16} />
+      +55 11 949940557
+    </a>
+    <span class="flex items-center gap-1">
+      <MapPin size={16} />
+      Atibaia, SP - Brazil
+    </span>
+    <a
+      target="_blank"
+      href="https://www.linkedin.com/in/guilherme-de-morais-china-costa-03b23b268"
+      class="flex items-center gap-1"
+    >
+      <Linkedin size={16} />
+      LinkedIn
+    </a>
+    <a href="https://github.com/yourusername" class="flex items-center gap-1">
+      <Github size={16} />
+      GitHub
+    </a>
+  </div>
 </header>

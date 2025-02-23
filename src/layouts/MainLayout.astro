@@ -1,13 +1,18 @@
 ---
-import Footer from "./Footer.astro";
+import Footer from "./footer.astro";
 import Head from "./head.astro";
-const { children } = Astro.props;
+import Header from "./Header.astro";
+import Navbar from "@components/navbar.astro";
 ---
 
 <html lang="en">
   <Head />
-  <main>
-    <slot />
-  </main>
-  <Footer />
+  <body>
+    <Navbar />
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <Header />
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

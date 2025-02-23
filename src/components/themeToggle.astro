@@ -1,0 +1,46 @@
+---
+import { Sun, Moon } from "lucide-react";
+---
+
+<button
+  id="theme-toggle"
+  class="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+  aria-label="Toggle theme"
+>
+  <Sun id="theme-toggle-light-icon" className="w-5 h-5 hidden" />
+  <Moon id="theme-toggle-dark-icon" className="w-5 h-5 hidden" />
+</button>
+
+<script is:inline>
+  function updateTheme() {
+    const theme =
+      localStorage.getItem("theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+
+    const lightIcon = document.getElementById("theme-toggle-light-icon");
+    const darkIcon = document.getElementById("theme-toggle-dark-icon");
+
+    if (theme === "dark") {
+      lightIcon.classList.remove("hidden");
+      darkIcon.classList.add("hidden");
+    } else {
+      lightIcon.classList.add("hidden");
+      darkIcon.classList.remove("hidden");
+    }
+  }
+
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", newTheme);
+    updateTheme();
+  }
+
+  document.addEventListener("DOMContentLoaded", updateTheme);
+  document
+    .getElementById("theme-toggle")
+    .addEventListener("click", toggleTheme);
+</script>
