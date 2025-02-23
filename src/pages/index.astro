@@ -1,6 +1,20 @@
 ---
 import "../styles/global.css";
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+import AboutMe from "@components/about.astro";
+import Header from "@layouts/Header.astro";
+import Projects from "@components/projects.astro";
+import Contacts from "@components/contact.astro";
+import WorkExperience from "@components/work-experience.astro";
+import Education from "@components/education.astro";
+import "@components/GlobalStyles.astro";
 ---
 
-<MainLayout>hello</MainLayout>
+<MainLayout>
+  <Header />
+  <AboutMe />
+  <WorkExperience />
+  <Education />
+  <Projects />
+  <Contacts />
+</MainLayout>
