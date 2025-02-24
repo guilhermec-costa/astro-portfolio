@@ -1,45 +1,70 @@
 ---
+import { FolderDot } from "lucide-react";
+
 const projects = [
   {
     name: "SLA - Real Time Monitoring Application",
     description:
       "Web Application that monitors service quality and IoT devices via interactive 3D dashboards. Simulates network improvements and provides predictive analysis.",
     technologies: "Python (Streamlit, Pandas, Plotly), MySQL",
-    link: "https://github.com/yourusername/project-repository", // Adicione o link do repositório no GitHub, se necessário
+    link: "https://github.com/guilhermec-costa/SLA-SignalMaps",
   },
   {
-    name: "Github Analytics - Fullstack Project",
+    name: "Github Analytics",
     description:
       "GitHub Analytics Platform is a tool to visualize and analyze metrics from GitHub repositories. It provides insights into contributions, collaborator activity, and code evolution, with interactive charts and detailed reports.",
     technologies:
       "Fastify, React, TailwindCSS, Shadcnui, TanStack Query, TanStack Table",
-    link: "https://github.com/yourusername/project-repository", // Adicione o link do repositório no GitHub, se necessário
+    link: "https://github.com/yourusername/project", // Adicione o link do repositório no GitHub, se necessário
   },
   {
-    name: "Workflow Notification Scheduler - Fullstack Project",
-    description:
-      "A workflow orchestration system designed to schedule and manage client notifications via email, SMS, and WhatsApp. The platform ensures reliable scheduling and delivery, featuring a user-friendly dashboard for monitoring and configuring workflows.",
-    technologies: "Spring Boot, PostgreSQL, React, AWS (SQS, Lambda)",
-    link: "https://github.com/yourusername/project-repository", // Adicione o link do repositório no GitHub, se necessário
+    name: "Tracker.nvim",
+    description: `A plugin for the Vim ecosystem that tracks and generates statistical data on user operations within the text editor.
+    The plugin logs various activities, providing insights into user habits and editor usage patterns. With real-time
+    tracking, users can analyze their workflow efficiency, identify areas for improvement, and optimize their use of
+    Vim`,
+    technologies: "Lua, Linux, Neovim",
+    link: "https://github.com/yourusername/project",
+  },
+  {
+    name: "Temporal - 2D Game",
+    description: `A 2D game in C++ using the SDL2 library, implementing a Entity-Component-System (ECS) architecture. The ECS
+system enabled flexible and scalable management of game entities and their behaviors, separating data and logic
+for optimal performance. The project featured collision detection and a dynamic event system.`,
+    technologies: "Lua, Linux, Neovim",
+    link: "https://github.com/yourusername/project",
+  },
+  {
+    name: "Semantic React Components",
+    description: `Semantic Components is a library of reusable, semantic React components and useful hooks designed to enhance your web applications. 
+    This library focuses on providing a set of well-structured components that are easy to integrate and customize, 
+    promoting best practices in React development.`,
+    technologies: "Lua, Linux, Neovim",
+    link: "https://github.com/yourusername/project",
   },
 ];
 ---
 
 <section id="projects" class="mb-12 py-10">
-  <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+  <h2 class="text-2xl font-semibold mb-4 flex items-center">
+    <FolderDot className="text-gray-500 mr-2" />Projects
+  </h2>
 
   <div class="space-y-6">
     {
       projects.map((project) => (
         <div>
           <h4 class="text-xl font-medium">{project.name}</h4>
-          <p class="text-gray-500 mt-2">{project.description}</p>
-          <p class="text-gray-500 mt-1">Tecnologias: {project.technologies}</p>
+          <p class="text-gray-500 mt-2 text-justify">{project.description}</p>
+          <p class="text-gray-500 mt-1">
+            <span class="text-gray-100">Technologies</span>:{" "}
+            {project.technologies}
+          </p>
           <a
             href={project.link}
             class="mt-4 inline-block text-blue-500 hover:underline"
           >
-            Veja o repositório
+            Go to repo
           </a>
         </div>
       ))
