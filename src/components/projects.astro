@@ -15,7 +15,7 @@ const projects = [
       "GitHub Analytics Platform is a tool to visualize and analyze metrics from GitHub repositories. It provides insights into contributions, collaborator activity, and code evolution, with interactive charts and detailed reports.",
     technologies:
       "Fastify, React, TailwindCSS, Shadcnui, TanStack Query, TanStack Table",
-    link: "https://github.com/yourusername/project", // Adicione o link do repositório no GitHub, se necessário
+    link: "https://github.com/guilhermec-costa/github-analytics",
   },
   {
     name: "Tracker.nvim",
@@ -24,7 +24,14 @@ const projects = [
     tracking, users can analyze their workflow efficiency, identify areas for improvement, and optimize their use of
     Vim`,
     technologies: "Lua, Linux, Neovim",
-    link: "https://github.com/yourusername/project",
+    link: "https://github.com/guilhermec-costa/Tracker.nvim",
+  },
+  {
+    name: "Dotfiles",
+    description: `description: A complete set of my dotfiles, including custom configurations for my workspace, 
+    such as window manager, text editor, and Linux personalizations.`,
+    technologies: "Lua, Linux",
+    link: "https://github.com/guilhermec-costa/dotfiles",
   },
   {
     name: "Temporal - 2D Game",
@@ -32,7 +39,7 @@ const projects = [
 system enabled flexible and scalable management of game entities and their behaviors, separating data and logic
 for optimal performance. The project featured collision detection and a dynamic event system.`,
     technologies: "Lua, Linux, Neovim",
-    link: "https://github.com/yourusername/project",
+    link: "https://github.com/guilhermec-costa/temporal",
   },
   {
     name: "Semantic React Components",
@@ -40,13 +47,20 @@ for optimal performance. The project featured collision detection and a dynamic 
     This library focuses on providing a set of well-structured components that are easy to integrate and customize, 
     promoting best practices in React development.`,
     technologies: "Lua, Linux, Neovim",
-    link: "https://github.com/yourusername/project",
+    link: "https://github.com/guilhermec-costa/semantic-react-components",
+  },
+  {
+    name: "SteamLens",
+    description: `
+    Steam Lens is a project designed to analyze and track real-time and historical data from Steam games.`,
+    technologies: "Spring Boot, Redis, PostgreSQL, Next.js",
+    link: "https://github.com/guilhermec-costa/steam-lens",
   },
 ];
 ---
 
 <section id="projects" class="mb-12 py-10">
-  <h2 class="text-2xl font-semibold mb-4 flex items-center">
+  <h2 class="text-2xl font-semibold mb-6 flex items-center">
     <FolderDot className="text-gray-500 mr-2" />Projects
   </h2>
 
@@ -61,6 +75,7 @@ for optimal performance. The project featured collision detection and a dynamic 
             {project.technologies}
           </p>
           <a
+            target="_blank"
             href={project.link}
             class="mt-4 inline-block text-blue-500 hover:underline"
           >
