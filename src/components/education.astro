@@ -1,41 +1,69 @@
 ---
+import { GraduationCap, Award, Book } from "lucide-react";
 
+const education = [
+  {
+    degree: "Bachelor's in Software Engineering",
+    institution: "Instituto INFNET",
+    period: "October 2023 - Present",
+    location: "Rio de Janeiro, RJ",
+  },
+  {
+    degree: "Technologist (Incomplete) in Data Science",
+    institution: "FIAP",
+    period: "January 2023 - September 2023",
+    location: "São Paulo, SP",
+  },
+];
+
+const certifications = [
+  "AWS Certified Cloud Practitioner CLF-C02 - 2025",
+  "AIMO (Asia International Olympiad Union) - 2020",
+  "Mathématiques Sans Frontiéres - 2018",
+];
+
+const courses = [
+  "Hashtag Treinamentos - Python",
+  "Udemy - C++ for Beginners",
+  "Udemy - Beginning C++ programming - From Beginner to Beyond",
+  "English Yourself - English Course",
+  "AWS Certified Cloud Practitioner Practice Exams CLF-C02",
+];
 ---
 
-<section id="education" class="mb-12">
-  <h2 class="text-2xl font-semibold mb-4">Education</h2>
-  <div class="space-y-4">
-    <div>
-      <h3 class="text-xl font-medium">Bachelor's in Software Engineering</h3>
-      <p class="text-gray-600">
-        Instituto INFNET | October 2023 - Present | Rio de Janeiro, RJ
-      </p>
-    </div>
-    <div>
-      <h3 class="text-xl font-medium">
-        Technologist (Incomplete) in Data Science
-      </h3>
-      <p class="text-gray-600">
-        FIAP | January 2023 - September 2023 | São Paulo, SP
-      </p>
-    </div>
-  </div>
-  <div class="mt-6">
-    <h3 class="text-xl font-medium mb-2">Certifications</h3>
-    <ul class="list-disc list-inside text-gray-700">
-      <li>AWS Certified Cloud Practitioner CLF-C02 - 2025</li>
-      <li>AIMO (Asia International Olympiad Union) - 2020</li>
-      <li>Mathématiques Sans Frontiéres - 2018</li>
-    </ul>
-  </div>
-  <div class="mt-6">
-    <h3 class="text-xl font-medium mb-2">Courses</h3>
-    <ul class="list-disc list-inside text-gray-700">
-      <li>Hashtag Treinamentos - Python</li>
-      <li>Udemy - C++ for Beginners</li>
-      <li>Udemy - Beginning C++ programming - From Beginner to Beyond</li>
-      <li>English Yourself - English Course</li>
-      <li>AWS Certified Cloud Practitioner Practice Exams CLF-C02</li>
-    </ul>
-  </div>
+<section id="education" class="py-10" <div class="mb-8">
+  <h3 class="text-4xl font-medium flex items-center gap-3 mb-6">
+    <GraduationCap size={32} className="text-gray-600" /> Education
+  </h3>
+  <ul class="space-y-6">
+    {
+      education.map((edu, index) => (
+        <li class="border-l-4 border-gray-300 pl-4">
+          <h4 class="text-lg font-medium text-gray-500">{edu.degree}</h4>
+          <p class="text-gray-600">{edu.institution}</p>
+          <p class="text-sm text-gray-500">
+            {edu.period} | {edu.location}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
 </section>
+
+<div class="mb-8">
+  <h3 class="flex items-center gap-3 mb-6">
+    <Award size={28} className="text-gray-600" /> Certifications
+  </h3>
+  <ul class="list-disc list-inside space-y-2">
+    {certifications.map((cert, index) => <li class="text-gray-500">{cert}</li>)}
+  </ul>
+</div>
+
+<div class="mb-8">
+  <h3 class="text-2xl font-medium flex items-center gap-3 mb-4">
+    <Book size={28} className="text-gray-600" /> Courses
+  </h3>
+  <ul class="list-disc list-inside space-y-2">
+    {courses.map((course, index) => <li class="text-gray-500">{course}</li>)}
+  </ul>
+</div>

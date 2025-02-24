@@ -25,16 +25,16 @@ const projects = [
 ];
 ---
 
-<section id="projects" class="mb-12 mt-4">
+<section id="projects" class="mb-12 py-10">
   <h2 class="text-2xl font-semibold mb-4">Projects</h2>
 
   <div class="space-y-6">
     {
       projects.map((project) => (
-        <div class="">
-          <h3 class="text-xl font-medium">{project.name}</h3>
-          <p class="text-gray-700 mt-2">{project.description}</p>
-          <p class="text-gray-600 mt-1">Tecnologias: {project.technologies}</p>
+        <div>
+          <h4 class="text-xl font-medium">{project.name}</h4>
+          <p class="text-gray-500 mt-2">{project.description}</p>
+          <p class="text-gray-500 mt-1">Tecnologias: {project.technologies}</p>
           <a
             href={project.link}
             class="mt-4 inline-block text-blue-500 hover:underline"

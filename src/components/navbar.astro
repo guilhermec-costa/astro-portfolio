@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from "@components/themeToggle.astro";
+import MyCurrentHour from "./MyCurrentHour";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -11,6 +12,7 @@ const navItems = [
 ---
 
 <nav
+  id="nav"
   class="fixed top-0 w-full bg-background/80 backdrop-blur-md shadow-sm z-50"
 >
   <div class="max-w-4xl mx-auto px-4">
@@ -28,6 +30,7 @@ const navItems = [
           ))
         }
       </div>
+      <MyCurrentHour client:load />
       <ThemeToggle />
       <button
         id="mobile-menu-button"

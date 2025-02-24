@@ -183,3 +183,7 @@ a:hover::after {
   background: var(--primary-color);
   color: white;
 }
+
+p {
+  line-height: 150%;
+}

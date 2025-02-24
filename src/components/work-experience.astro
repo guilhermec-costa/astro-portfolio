@@ -37,10 +37,10 @@ const workExperiences: WorkExperience[] = [
 ];
 ---
 
-<section id="experience" class="py-20">
-  <div class="text-center">
+<section id="experience" class="py-10">
+  <div class="">
     <h2 class="text-4xl font-bold">My Work Experience</h2>
-    <p class="mt-4">
+    <p class="mt-4 text-gray-500">
       Here are some of my professional experiences and the projects I have
       worked on.
     </p>
@@ -50,15 +50,15 @@ const workExperiences: WorkExperience[] = [
     {
       workExperiences.map((experience) => (
         <div class="mb-12">
-          <h3 class="text-2xl font-semibold">
-            {experience.title} - {experience.company}
-          </h3>
-          <p class="text-lg text-gray-600">
+          <h4 class="text-2xl font-semibold">
+            {experience.title} - <span class="bg-">{experience.company}</span>
+          </h4>
+          <p class="text-gray-400 mt-2">
             {experience.duration} | {experience.location}
           </p>
-          <ul class="mt-4 list-disc pl-5">
+          <ul class="mt-4 list-disc pl-5 text-gray-500">
             {experience.responsibilities.map((responsibility) => (
-              <li>{responsibility}</li>
+              <li class="py-2">{responsibility}</li>
             ))}
           </ul>
         </div>

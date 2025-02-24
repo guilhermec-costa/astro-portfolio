@@ -1,43 +1,56 @@
 ---
-
+const skills = [
+  {
+    icon: "🧑‍💻",
+    title: "Programming Languages",
+    content: "TypeScript, Java, Python (Pandas, NumPy), C++, Lua, SQL",
+  },
+  {
+    icon: "⚙️",
+    title: "Frameworks & Technologies",
+    content: "React, Spring Boot, NestJS, Tailwind CSS, Selenium, Plotly",
+  },
+  {
+    icon: "📊",
+    title: "Databases",
+    content: "PostgreSQL, Oracle",
+  },
+  {
+    icon: "🔍",
+    title: "Version Control",
+    content: "Git",
+  },
+  {
+    icon: "☁️",
+    title: "Cloud Tools",
+    content: "AWS (SQS, S3)",
+  },
+  {
+    icon: "🤝",
+    title: "Soft Skills",
+    content:
+      "Critical Thinking, Adaptability, Proactivity, Creativity, Communication",
+  },
+  {
+    icon: "🌐",
+    title: "Languages",
+    content: "Intermediate English, Native Portuguese",
+  },
+];
 ---
 
-<section id="skills" class="mb-12">
-  <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div>
-      <h3 class="text-xl font-medium mb-2">Programming Languages</h3>
-      <p class="text-gray-700">
-        Typescript, Java, Python (Pandas, NumPy), C++, Lua, SQL
-      </p>
-    </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">Frameworks & Technologies</h3>
-      <p class="text-gray-700">
-        React, Spring Boot, NestJS, tailwindcss, Selenium, Plotly
-      </p>
-    </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">Databases</h3>
-      <p class="text-gray-700">PostgreSQL, Oracle</p>
-    </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">Version Control</h3>
-      <p class="text-gray-700">Git</p>
-    </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">Cloud Tools</h3>
-      <p class="text-gray-700">AWS (SQS, S3)</p>
-    </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">Soft Skills</h3>
-      <p class="text-gray-700">
-        Critical Thinking, Adaptability, Proactivity, Creativity, Communication
-      </p>
-    </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">Languages</h3>
-      <p class="text-gray-700">Intermediate English, Native Portuguese</p>
-    </div>
+<section id="skills" class="mb-16 py-12">
+  <h2 class="text-3xl font-semibold mb-8">Skills</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      skills.map((skill) => (
+        <div>
+          <h4 class="flex items-center text-xl font-medium mb-4">
+            <span class="mr-2">{skill.icon}</span> {skill.title}
+          </h4>
+          <p class="text-gray-500">{skill.content}</p>
+        </div>
+      ))
+    }
   </div>
 </section>

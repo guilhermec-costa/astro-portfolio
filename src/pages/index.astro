@@ -3,16 +3,21 @@ import "../styles/global.css";
 import MainLayout from "@layouts/MainLayout.astro";
 import AboutMe from "@components/about.astro";
 import Projects from "@components/projects.astro";
-import WorkExperience from "@components/work-experience.astro";
 import Education from "@components/education.astro";
 import Skills from "@components/skills.astro";
+import Test from "@components/MyCurrentHour";
+import WorkExperience from "@components/work-experience.astro";
 ---
 
 <MainLayout>
   <AboutMe />
+  <hr class="solid border-t-gray-500" />
   <WorkExperience />
+  <hr class="solid border-t-gray-500" />
   <Education />
+  <hr class="solid border-t-gray-500" />
   <Skills />
+  <hr class="solid border-t-gray-500" />
   <Projects />
 </MainLayout>
 
