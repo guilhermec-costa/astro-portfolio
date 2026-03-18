@@ -6,18 +6,34 @@ type WorkExperience = {
   location: string;
   responsibilities: string[];
 };
-
 const workExperiences: WorkExperience[] = [
+  {
+    title: "Software Developer",
+    company: "Mr. Turing",
+    duration: "Apr 2025 - Present",
+    location: "Remote",
+    responsibilities: [
+      "Full-stack development on an AI SaaS product using Cloudflare Workers, Hono, Supabase, and React.",
+      "Refactored the application's logging system, introducing standardization, observability, and end-to-end traceability.",
+      "Redesigned the storage module (R2) with an extensible architecture supporting multiple providers.",
+      "Built a decoupled, modular cache system based on Cloudflare KV, designed for future extensions.",
+      "Implemented an internal workflow engine for orchestrating processes and complex automations.",
+      "Decoupled the Hono framework via adapters, increasing testability and architectural flexibility.",
+      "Built multi-LLM applications integrating different language model providers via AI Gateway.",
+      "Created a centralized policy system for consistent authorization across the entire application.",
+      "Strengthened a culture of unit and integration testing, continuously improving code quality.",
+    ],
+  },
   {
     title: "Fullstack Developer Intern",
     company: "Elevaty",
-    duration: "Jan 2023 - Present",
+    duration: "Jan 2023 - Mar 2025",
     location: "Remote",
     responsibilities: [
-      "Contributed to the maintenance and development of new features for a customer card management system using React and Node.js.",
-      "Currently building workflow configuration software from scratch using PostgreSQL, Spring Boot, React, and AWS cloud tools, such as SQS.",
-      "Provided support to the Customer Success team.",
-      "Promoted the adoption of a testing culture within the company.",
+      "Maintained and evolved features for a customer card management system using React and Node.js.",
+      "Built workflow configuration software from scratch for a multi-channel notification system (email, SMS, WhatsApp) using Spring Boot, React, PostgreSQL, and AWS SQS.",
+      "Provided support to the Customer Success team, developing product and user experience awareness.",
+      "Led the initiative to adopt a culture of automated testing within the engineering team.",
     ],
   },
   {
@@ -26,17 +42,15 @@ const workExperiences: WorkExperience[] = [
     duration: "Sep 2022 - Dec 2023",
     location: "Jarinu, SP",
     responsibilities: [
-      "Developed graphical interfaces using Python, integrated with REST APIs for data analysis and reporting.",
-      "Automated tasks with Python, including email automation, integration with Office 365 (Excel, Word), and web automations with Selenium.",
-      "Performed data analysis with Pandas, Numpy, and Plotly.",
-      "Managed ETL processes using MySQL and PostgreSQL databases.",
       "Built real-time dashboards to monitor 260,000 IoT devices, improving service quality by 40%.",
-      "Identified LoRa network gateway installation sites to enhance signal quality.",
+      "Developed graphical interfaces using Python integrated with REST APIs for data analysis and reporting.",
+      "Automated tasks with Python, including email automation, Office 365 integration (Excel, Word), and web automation with Selenium.",
+      "Managed ETL pipelines using MySQL and PostgreSQL and performed data analysis with Pandas, NumPy, and Plotly.",
+      "Identified strategic LoRa network gateway installation sites to enhance signal quality.",
     ],
   },
 ];
 ---
-
 <section id="experience" class="py-10">
   <div class="">
     <h2 class="text-4xl font-bold">My Work Experience</h2>
@@ -45,7 +59,6 @@ const workExperiences: WorkExperience[] = [
       worked on.
     </p>
   </div>
-
   <div class="mt-8">
     {
       workExperiences.map((experience) => (

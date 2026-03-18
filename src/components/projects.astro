@@ -1,69 +1,68 @@
 ---
 import { FolderDot } from "lucide-react";
-
 const projects = [
   {
-    name: "SLA - Real Time Monitoring Application",
+    name: "code-telescope",
     description:
-      "Web Application that monitors service quality and IoT devices via interactive 3D dashboards. Simulates network improvements and provides predictive analysis.",
-    technologies: "Python (Streamlit, Pandas, Plotly), MySQL",
-    link: "https://github.com/guilhermec-costa/SLA-SignalMaps",
+      "A Telescope.nvim-inspired fuzzy finder extension for VS Code, bringing keyboard-first navigation to your entire workflow. Search files, symbols, commands, and more without leaving the keyboard.",
+    technologies: "TypeScript, VS Code Extension API",
+    link: "https://github.com/guilhermec-costa/code-telescope",
+  },
+  {
+    name: "Tracker.nvim",
+    description:
+      "A Neovim plugin that tracks and generates statistical data on user operations within the text editor. Logs various activities and provides insights into user habits, workflow efficiency, and editor usage patterns through real-time dashboards.",
+    technologies: "Lua, Neovim",
+    link: "https://github.com/guilhermec-costa/Tracker.nvim",
   },
   {
     name: "Github Analytics",
     description:
-      "GitHub Analytics Platform is a tool to visualize and analyze metrics from GitHub repositories. It provides insights into contributions, collaborator activity, and code evolution, with interactive charts and detailed reports.",
-    technologies:
-      "Fastify, React, TailwindCSS, Shadcnui, TanStack Query, TanStack Table",
+      "A platform to visualize and analyze metrics from GitHub repositories. Provides insights into contributions, collaborator activity, and code evolution with interactive charts and detailed reports.",
+    technologies: "Fastify, React, TailwindCSS, Shadcn/ui, TanStack Query, TanStack Table",
     link: "https://github.com/guilhermec-costa/github-analytics",
   },
   {
-    name: "Tracker.nvim",
-    description: `A plugin for the Vim ecosystem that tracks and generates statistical data on user operations within the text editor.
-    The plugin logs various activities, providing insights into user habits and editor usage patterns. With real-time
-    tracking, users can analyze their workflow efficiency, identify areas for improvement, and optimize their use of
-    Vim`,
-    technologies: "Lua, Linux, Neovim",
-    link: "https://github.com/guilhermec-costa/Tracker.nvim",
-  },
-  {
-    name: "Dotfiles",
-    description: `description: A complete set of my dotfiles, including custom configurations for my workspace, 
-    such as window manager, text editor, and Linux personalizations.`,
-    technologies: "Lua, Linux",
-    link: "https://github.com/guilhermec-costa/dotfiles",
-  },
-  {
-    name: "Temporal - 2D Game",
-    description: `A 2D game in C++ using the SDL2 library, implementing a Entity-Component-System (ECS) architecture. The ECS
-system enabled flexible and scalable management of game entities and their behaviors, separating data and logic
-for optimal performance. The project featured collision detection and a dynamic event system.`,
-    technologies: "Lua, Linux, Neovim",
-    link: "https://github.com/guilhermec-costa/temporal",
-  },
-  {
-    name: "Semantic React Components",
-    description: `Semantic Components is a library of reusable, semantic React components and useful hooks designed to enhance your web applications. 
-    This library focuses on providing a set of well-structured components that are easy to integrate and customize, 
-    promoting best practices in React development.`,
-    technologies: "Lua, Linux, Neovim",
-    link: "https://github.com/guilhermec-costa/semantic-react-components",
+    name: "SLA - Real Time Monitoring Application",
+    description:
+      "Web application that monitors service quality and IoT devices via interactive 3D dashboards. Simulates network improvements and provides predictive analysis.",
+    technologies: "Python (Streamlit, Pandas, Plotly), MySQL",
+    link: "https://github.com/guilhermec-costa/SLA-SignalMaps",
   },
   {
     name: "SteamLens",
-    description: `
-    Steam Lens is a project designed to analyze and track real-time and historical data from Steam games.`,
+    description:
+      "A project designed to analyze and track real-time and historical data from Steam games, offering insights into player trends and game performance.",
     technologies: "Spring Boot, Redis, PostgreSQL, Next.js",
     link: "https://github.com/guilhermec-costa/steam-lens",
   },
+  {
+    name: "Semantic React Components",
+    description:
+      "A library of reusable, semantic React components and useful hooks designed to enhance web applications. Focuses on well-structured, easy-to-integrate components that promote best practices in React development.",
+    technologies: "React, TypeScript",
+    link: "https://github.com/guilhermec-costa/semantic-react-components",
+  },
+  {
+    name: "Temporal - 2D Game",
+    description:
+      "A 2D game built with C++ and SDL2, implementing an Entity-Component-System (ECS) architecture for flexible and scalable management of game entities. Features collision detection and a dynamic event system.",
+    technologies: "C++, SDL2",
+    link: "https://github.com/guilhermec-costa/temporal",
+  },
+  {
+    name: "Dotfiles",
+    description:
+      "A complete set of personal dotfiles including custom configurations for my workspace: window manager, Neovim, and general Linux personalizations.",
+    technologies: "Lua, Linux, Shell",
+    link: "https://github.com/guilhermec-costa/dotfiles",
+  },
 ];
 ---
-
 <section id="projects" class="mb-12 py-10">
   <h2 class="text-2xl font-semibold mb-6 flex items-center">
     <FolderDot className="text-gray-500 mr-2" />Projects
   </h2>
-
   <div class="space-y-6">
     {
       projects.map((project) => (
